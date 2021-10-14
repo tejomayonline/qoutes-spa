@@ -16,10 +16,10 @@ const QuoteDetail = (props) => {
     status,
     error,
   } = useHttp(getSingleQuote, true);
+  const { quoteId } = params;
   useEffect(() => {
-    const quoteId = params.quoteId;
     sendRequest(quoteId);
-  }, [sendRequest, params]);
+  }, [sendRequest, quoteId]);
 
   if (status === "pending") {
     return (

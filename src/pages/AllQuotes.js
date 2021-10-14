@@ -25,7 +25,7 @@ const AllQuotes = (props) => {
     );
   }
   if (error) {
-    return <p className="centered focused">{error}</p>;
+    return <p className="centered">{error}</p>;
   }
 
   if (quotes.length === 0 || !quotes) {
